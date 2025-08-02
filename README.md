@@ -1,1 +1,2 @@
 # Frontend_Gift_Project
+This project is a front-end website for an online store that offers personalized and customized gifts, including greeting cards, pendants, portraits, calendars, and bookmarks. Built using only HTML and CSS, the website features a user-friendly interface with product images, descriptions, a navigational menu, and interactive elements like a working form and confirmation popup. The goal is to provide users with a seamless experience for browsing and placing orders for unique, handcrafted gifts suitable for every occasion.
