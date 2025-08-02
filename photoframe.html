@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Frame - Product Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e3f2e1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 40px;
+      border-radius: 12px;
+    }
+
+    .product-image {
+      flex: 1;
+    }
+
+    .product-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-details {
+      flex: 1;
+    }
+
+    .product-details h2 {
+      margin-top: 0;
+      font-size: 28px;
+      color: #2e6f44;
+    }
+
+    .product-details p {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .buy-now-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #2e6f44;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .buy-now-btn:hover {
+      user-select: none;
+      cursor: pointer;
+      outline: none;
+      background-color: #245c39;
+    }
+
+    #toggle-form {
+      display: none;
+    }
+
+    .form-container {
+      display: none;
+      margin-top: 30px;
+      background-color: #f5fff4;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #c4e3cb;
+    }
+
+    #toggle-form:checked + label + .form-container {
+      display: block;
+    }
+
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    .form-container input[type="submit"] {
+      background-color: #2e6f44;
+      color: white;
+      cursor: pointer;
+      border: none;
+      font-weight: bold;
+    }
+
+    .form-container input[type="submit"]:hover {
+      background-color: #245c39;
+    }
+
+    footer {
+      background-color: #4C9F70;
+      text-align: center;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .contact-us {
+      color: #45a049;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .contact-us:hover {
+      text-decoration: underline;
+    }
+
+    /* Popup message */
+    .popup-message {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin: 30px auto;
+      text-align: center;
+      font-weight: bold;
+      width: 60%;
+    }
+
+    #order-success:target {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="product-image">
+      <img src="https://i.pinimg.com/736x/55/c7/92/55c792bcd8cfed83006dcd8253014b69.jpg" alt="Photo Frame">
+    </div>
+    <div class="product-details">
+      <h2>Customized Photo Frame</h2>
+      <p>
+        Capture your memories beautifully with our hand-crafted customized photo frames. Choose up to 6 pictures to be included in this elegant frame. The photos are printed on premium matte paper and arranged tastefully with optional quotes or dates.
+        <br><br>
+        Ideal for birthdays, anniversaries, or any special occasion. Add your personal message and make it truly one-of-a-kind.<br> Kindly send the photos in the given no. 9141578WER <br> <b> Price: 250 </b>
+      </p>
+
+      <!-- Hidden checkbox to trigger the form -->
+      <input type="checkbox" id="toggle-form">
+      <label class="buy-now-btn" for="toggle-form">Buy Now</label>
+
+      <!-- Form appears only after clicking Buy Now -->
+      <div class="form-container">
+        <!-- Redirect to #order-success on submit -->
+        <form action="#order-success" method="GET">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="address">Delivery Address:</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+
+          <label for="message">Customized Message:</label>
+          <textarea id="message" name="message" rows="2" placeholder="Optional message to print on the frame"></textarea>
+
+          <input type="submit" value="Place Order">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order success message -->
+  <div id="order-success" class="popup-message">
+    Your order has been placed successfully and it will be delivered in the next 7 working days.<br> Thank you!!
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Hamesha Yours. All rights reserved.</p>
+    <a class="contact-us" href="contact.html">Contact Us</a>
+  </footer>
+
+</body>
+</html>
